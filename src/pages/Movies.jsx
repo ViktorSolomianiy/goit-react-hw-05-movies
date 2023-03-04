@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useState, lazy } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchSearchMovie } from 'services/movieApi';
+import './Movies.css';
 
 const MovieList = lazy(() => import('../components/MovieList/MovieList'));
 
@@ -36,14 +37,17 @@ const Movies = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="search-form" onSubmit={handleSubmit}>
         <input
+          className="search-label"
           type="text"
           name="name"
           value={searchQuery}
           onChange={handleChange}
         />
-        <button type="submit">Search</button>
+        <button className="search-btn" type="submit">
+          Search
+        </button>
       </form>
       <Suspense fallback={null}>
         <MovieList movies={movies} />

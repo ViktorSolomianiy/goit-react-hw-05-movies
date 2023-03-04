@@ -1,9 +1,43 @@
 .movie_details-container {
   display: flex;
+  margin-left: 30px;
+}
+
+.movie_details-btn {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: unset;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 250ms;
+}
+
+.movie_details-btn:hover,
+.movie_details-btn:focus {
+  color: rgb(255, 109, 109);
 }
 
 .movie_details-info {
   margin-left: 20px;
+  margin-top: 10px;
+}
+
+.movie_details-img {
+  border-radius: 5px;
+}
+
+.movie_details-title {
+  margin-bottom: 15px;
+}
+
+.movie_details-info-title {
+  margin-bottom: 5px;
+}
+
+.movie_details-info-text {
+  margin-bottom: 15px;
 }
 
 .movie_details-genres {
@@ -19,4 +53,15 @@
 
 .movie_details-text {
   margin-bottom: 10px;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  transition: color 250ms;
+}
+
+.text:hover,
+.text:focus {
+  color: rgb(255, 109, 109);
 }

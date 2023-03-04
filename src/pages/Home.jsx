@@ -4,17 +4,28 @@ import './Home.css';
 
 const Home = ({ movies }) => {
   const location = useLocation();
+  console.log(movies);
 
   return (
     <>
       <h2 className="home-title">Trending Today</h2>
 
       <ul className="home-gallery">
-        {movies.map(({ id, title }) => {
+        {movies.map(({ id, title, poster_path }) => {
           return (
-            <li key={id}>
-              <NavLink state={{ from: location }} to={`/movies/${id}`}>
-                {title}
+            <li key={id} className="home-gallery-item">
+              <NavLink
+                className="home-gallery-link"
+                state={{ from: location }}
+                to={`/movies/${id}`}
+              >
+                <img
+                  className="home-gallery-img"
+                  src={`https://image.tmdb.org/t/p/original${poster_path}`}
+                  alt={title}
+                  width="250"
+                />
+                <h2 className="home-gallery-title">{title}</h2>
               </NavLink>
             </li>
           );

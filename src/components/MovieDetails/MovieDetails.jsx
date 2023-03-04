@@ -38,23 +38,28 @@ const MovieDetails = () => {
 
   return (
     <>
-      <button onClick={handleClick}>Back</button>
+      <button className="movie_details-btn" onClick={handleClick}>
+        Back
+      </button>
       <div className="movie_details-container">
         <img
+          className="movie_details-img"
           src={`https://image.tmdb.org/t/p/original${poster_path}`}
           alt={title}
           width="250"
         />
         <div className="movie_details-info">
-          <h2>
+          <h2 className="movie_details-title">
             {title} ({release_date.split('-')[0]})
           </h2>
-          <p>User score: {vote_average * 10}%</p>
+          <p className="movie_details-info-text">
+            <b>User score:</b> {vote_average * 10}%
+          </p>
 
-          <h3>Overview</h3>
-          <p>{overview}</p>
+          <h3 className="movie_details-info-title">Overview</h3>
+          <p className="movie_details-info-text">{overview}</p>
 
-          <h3>Genres</h3>
+          <h3 className="movie_details-info-title">Genres</h3>
           <div className="movie_details-genres">
             {genres.map(genre => {
               return <p key={genre.id}>{genre.name}</p>;
@@ -64,14 +69,16 @@ const MovieDetails = () => {
       </div>
 
       <ul className="movie_details-list">
-        <p className="movie_details-text">Additional information</p>
+        <p className="movie_details-text">
+          <b>Additional information</b>
+        </p>
         <li>
-          <Link to="cast" state={location.state}>
+          <Link className="text" to="cast" state={location.state}>
             Cast
           </Link>
         </li>
         <li>
-          <Link to="reviews" state={location.state}>
+          <Link className="text" to="reviews" state={location.state}>
             Reviews
           </Link>
         </li>

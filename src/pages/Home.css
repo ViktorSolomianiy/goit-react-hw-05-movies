@@ -1,9 +1,41 @@
 .home-title {
-  margin-left: 20px;
+  font-family: fantasy;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
 }
 
 .home-gallery {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-gallery-item {
+  width: 250px;
+  height: 435px;
+  box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.61);
+  border-radius: 5px;
+  transition: transform 250ms;
+}
+
+.home-gallery-item:hover,
+.home-gallery-item:focus {
+  transform: scale(1.02);
+}
+
+.home-gallery-img {
+  height: 375px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.home-gallery-title {
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 15px;
+  color: black;
 }

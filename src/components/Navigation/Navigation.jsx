@@ -4,7 +4,7 @@ import './Navigation.css';
 const Navigation = () => {
   return (
     <header className="header">
-      <nav>
+      <nav className="nav">
         <NavLink className="nav-link" to="/">
           Home
         </NavLink>{' '}

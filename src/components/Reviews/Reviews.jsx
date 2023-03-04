@@ -20,11 +20,11 @@ const Reviews = () => {
       {reviews.length === 0 ? (
         <p>Sorry, but there are no reviews here.. 😞 </p>
       ) : (
-        <ul>
+        <ul className="reviews-list">
           {reviews.map(({ id, author, content }) => {
             return (
-              <li key={id}>
-                <h4>{author}</h4>
+              <li key={id} className="reviews-item">
+                <h4 className="reviews-title">{author}</h4>
                 <p>{content}</p>
               </li>
             );

@@ -1,6 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import '../../pages/Home.css';
 
 const MovieList = ({ movies }) => {
   const location = useLocation();

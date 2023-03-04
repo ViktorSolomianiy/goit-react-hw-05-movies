@@ -4,7 +4,6 @@ import './Home.css';
 
 const Home = ({ movies }) => {
   const location = useLocation();
-  console.log(movies);
 
   return (
     <>

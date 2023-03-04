@@ -53,7 +53,7 @@ const MovieDetails = () => {
             {title} ({release_date.split('-')[0]})
           </h2>
           <p className="movie_details-info-text">
-            <b>User score:</b> {vote_average * 10}%
+            <b>User score:</b> {Math.floor(vote_average) * 10}%
           </p>
 
           <h3 className="movie_details-info-title">Overview</h3>

@@ -28,13 +28,13 @@ export const App = () => {
 
       <Suspense fallback={null}>
         <Routes>
-          <Route path="/" index element={<Home movies={movies} />}></Route>
-          <Route path="/movies" element={<Movies />}></Route>
+          <Route path="/" index element={<Home movies={movies} />} />
+          <Route path="/movies" element={<Movies />} />
           <Route path="/movies/:id" element={<MovieDetails movies={movies} />}>
-            <Route path="/movies/:id/cast" element={<Cast />}></Route>
-            <Route path="/movies/:id/reviews" element={<Reviews />}></Route>
+            <Route path="/movies/:id/cast" element={<Cast />} />/
+            <Route path="/movies/:id/reviews" element={<Reviews />} />
           </Route>
-          <Route path="*" element={<Home />}></Route>
+          <Route path="*" element={<Home />} />
         </Routes>
       </Suspense>
     </div>

@@ -1,0 +1,16 @@
+.header {
+  padding: 20px;
+  border-bottom: 3px solid gray;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 10px;
+  padding: 10px;
+  color: black;
+}
+
+.nav-link.active {
+  color: rgb(255, 109, 109);
+}

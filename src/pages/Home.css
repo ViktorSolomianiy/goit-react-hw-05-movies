@@ -1,0 +1,9 @@
+.home-title {
+  margin-left: 20px;
+}
+
+.home-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

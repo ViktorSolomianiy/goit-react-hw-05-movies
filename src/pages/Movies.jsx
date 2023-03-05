@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState, lazy } from 'react';
+import { Suspense, useEffect, useState, lazy, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchSearchMovie } from 'services/movieApi';
 import './Movies.css';
@@ -10,9 +10,12 @@ const Movies = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const searchName = searchParams.get('query') ?? '';
+  console.log(searchName);
 
   useEffect(() => {
-    fetchSearchMovie(searchName).then(setMovies);
+    fetchSearchMovie(searchName).then(data => {
+      setMovies(data);
+    });
   }, [searchName]);
 
   const handleChange = e => {
@@ -30,7 +33,7 @@ const Movies = () => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
 
-    fetchSearchMovie(nextParams.query);
+    fetchSearchMovie(nextParams.query).then(setMovies);
 
     setSearchQuery('');
   };
